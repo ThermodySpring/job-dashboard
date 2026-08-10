@@ -29,8 +29,8 @@ jobs:
       - name: Prepare site
         run: |
           mkdir -p _site
-          cp index.html grading-fix.js _site/
-          sed -i 's#</body>#<script src="./grading-fix.js"></script></body>#' _site/index.html
+          cp index.html grading-fix.js career-strategy.js _site/
+          sed -i 's#</body>#<script src="./grading-fix.js"></script><script src="./career-strategy.js"></script></body>#' _site/index.html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
